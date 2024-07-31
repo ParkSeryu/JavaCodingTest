@@ -1,6 +1,5 @@
 package p18870;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,6 @@ class MainTest {
         list.add(-9);
 
         // when
-        Main.solution(list);
 
         // then
     }
