@@ -10,9 +10,7 @@ class MainTest {
 
     @Test
     void solutionTest() {
-        Main main = new Main();
-        int solution = main.solution(3, 5);
-
+        int solution = Main.solution(3, 5);
         assertThat(solution).isEqualTo(8);
     }
 }

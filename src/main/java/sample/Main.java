@@ -6,16 +6,31 @@ import java.util.Scanner;
 
 public class Main {
 
-    public int solution(int a, int b) {
+    public static int solution(int a, int b) {
         return a + b;
     }
 
     public static void main(String[] args) throws FileNotFoundException {
         System.setIn(new FileInputStream("src/main/java/sample/input.txt"));
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        Main main = new Main();
-        System.out.println(main.solution(a, b));
+        int N = sc.nextInt();
+        int[] arr = new int[6];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int T = sc.nextInt();
+        int P = sc.nextInt();
+
+        int answer_T = 0;
+        for (int i : arr) {
+            answer_T += (int) Math.ceil((double) i / T);
+        }
+
+
+        System.out.println(answer_T);
+        System.out.print(N / P + " ");
+        System.out.print(N % P);
+
     }
 }
