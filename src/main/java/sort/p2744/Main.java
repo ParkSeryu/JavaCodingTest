@@ -1,6 +1,5 @@
-package p2744;
+package sort.p2744;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package p2910;
+package sort.p2910;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

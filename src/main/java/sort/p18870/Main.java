@@ -1,4 +1,4 @@
-package p18870;
+package sort.p18870;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

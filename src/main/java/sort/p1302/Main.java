@@ -1,4 +1,4 @@
-package p1302;
+package sort.p1302;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
