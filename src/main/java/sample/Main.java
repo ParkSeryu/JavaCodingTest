@@ -19,6 +19,13 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
+        Integer a = 1;
+        Integer b = 2;
+
+        if(a.equals(b)){
+
+        }
+
         int T = sc.nextInt();
         int P = sc.nextInt();
 
