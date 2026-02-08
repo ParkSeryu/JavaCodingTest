@@ -1,32 +1,23 @@
 package datastructure.nossi.p23;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
     static class Solution {
 
         public static int solution(int[] prices, int target) {
-            Arrays.sort(prices);
-            int l = 0;
-            int r = prices.length - 1;
             int answer = 0;
+            HashSet<Integer> hashSet = new HashSet<>();
 
-            while(l < r){
-                if(prices[l] + prices[r] == target){
+            for(int i = 0; i < prices.length; i++){
+                if(hashSet.contains(target - prices[i])){
                     answer++;
-                    l++;
-                    r--;
-                } else if(prices[l] + prices[r] < target){
-                    l++;
-                } else {
-                    r--;
+                }else{
+                    hashSet.add(prices[i]);
                 }
             }
-
             return answer;
         }
     }
