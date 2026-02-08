@@ -10,13 +10,20 @@ public class Main {
     static class Solution {
 
         public static int solution(int[] prices, int target) {
+            Arrays.sort(prices);
+            int l = 0;
+            int r = prices.length - 1;
             int answer = 0;
 
-            for(int i = 0; i < prices.length; i++){
-                for(int j = i + 1; j < prices.length; j++){
-                    if(prices[i] + prices[j] == target){
-                        answer++;
-                    }
+            while(l < r){
+                if(prices[l] + prices[r] == target){
+                    answer++;
+                    l++;
+                    r--;
+                } else if(prices[l] + prices[r] < target){
+                    l++;
+                } else {
+                    r--;
                 }
             }
 
