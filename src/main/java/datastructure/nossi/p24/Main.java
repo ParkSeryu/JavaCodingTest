@@ -1,7 +1,6 @@
 package datastructure.nossi.p24;
 
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.Stack;
 
 public class Main {
@@ -26,7 +25,7 @@ public class Main {
                 }
             }
 
-            return answer;
+            return stack.isEmpty() ? answer : -1;
         }
     }
 
