@@ -1,7 +1,8 @@
 package datastructure.nossi.p26;
 
 import java.io.IOException;
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Main {
 
@@ -9,17 +10,18 @@ public class Main {
 
         public static int[] solution(int[] weights) {
             int[] answer = new int[weights.length];
+            Deque<int[]> stack = new ArrayDeque<>();
 
-            for(int i = 0; i < weights.length - 1; i++){
-                int cnt = 0;
-                for(int j = i + 1; j < weights.length; j++){
-                    cnt++;
-                    if(weights[i] < weights[j]){
-                        answer[i] = cnt;
-                        break;
-                    }
+            for(int i = 0; i < answer.length; i++){
+                int weight = weights[i];
+                while(!stack.isEmpty() && stack.peek()[1] < weight){
+                    int prevInfo[] = stack.pop();
+                    int index = prevInfo[0];
+                    answer[index] = i - index;
                 }
+                stack.push(new int[]{i, weight});
             }
+
             return answer;
         }
     }
