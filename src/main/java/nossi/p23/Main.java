@@ -1,4 +1,4 @@
-package datastructure.nossi.p23;
+package nossi.p23;
 
 import java.io.*;
 import java.util.*;

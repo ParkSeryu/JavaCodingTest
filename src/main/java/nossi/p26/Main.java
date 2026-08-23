@@ -1,4 +1,4 @@
-package datastructure.nossi.p26;
+package nossi.p26;
 
 import java.io.IOException;
 import java.util.ArrayDeque;

@@ -1,4 +1,4 @@
-package datastructure.nossi.p24;
+package nossi.p24;
 
 import java.io.IOException;
 import java.util.Stack;
